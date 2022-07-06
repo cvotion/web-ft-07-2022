@@ -24,4 +24,13 @@ print(type(isValid2))
 print(type(myNum))
 print(type(myName))
 
+name = input("Name: ")
+age = input("Age: ")
+print(type(age))
+
+age2 = int(age)
+yob = 2022 - age2
+
+print(f"Year of birth is: {yob}")
+
 
