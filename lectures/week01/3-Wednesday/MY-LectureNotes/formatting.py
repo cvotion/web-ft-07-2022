@@ -19,9 +19,10 @@ print(last_name)
 
 my_name = (first_name + " " + last_name)
 
+
 # print "My name is ???" out to the console.  Substitue the ??? with the my_name variable.
 
-print("My name is", my_name)
+print(f"My name is {my_name}")
 
 # create a variable called company_name and set the value to "DigitalCrafts"
 
@@ -43,8 +44,8 @@ print(f"{first_name}_{last_name}")
 # Email: harry.potter@DigitalCrafts.com
 # Username: harry_potter
 
-print(f"Welcome to {company_name}, {my_name}")
-print(f"Email: {first_name}.{last_name}@{company_name}.com")
-print(f"Username: {first_name}_{last_name}")
+print(f"""Welcome to {company_name}, {my_name}!
+Email: {first_name}.{last_name}@{company_name}.com
+Username: {first_name}_{last_name}""")
 
 
