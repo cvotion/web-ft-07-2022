@@ -28,6 +28,27 @@ print(new_list)
 
 # Calculate the result of adding the two matrices. The number in each position in the resulting matrix should be the sum of the numbers in the corresponding addend matrices. Example: to add
 
+# 1 3
+# 2 4
+
+# 5 2
+# 1 0
+
+# 6 5
+# 3 4
+
+
+# x = [[1, 3], [2, 4]]
+# y = [[5, 2], [1, 0]]
+
+# result = [[0, 0], [0, 0]]
+
+# for i in range(len(x)):
+#     for j in range(len(x[0])): 
+#         result[i][j] = x[i][j] + y[i][j] 
+# for r in result:
+#     print(r)        
+
 # ```
 # 1 3
 # 2 4
@@ -49,7 +70,14 @@ print(new_list)
 # #### 3. Matrix Addition II
 
 # Use your solution in Matrix Addition, and extend it to work for a pair of matrices of any size, as long as they have the same size.
-
+first = [[1, 3], [2, 4], [5, 7]]
+second = [[7, 5], [4, 2],[20, 9]]
+if len(first) == len(second):
+    results = [[first[i][j] + second[i][j] for j in range(len(first[0]))] for i in range(len(first))]
+    for r in results:
+        print(r)
+else:
+    print("Lists aren't the same size.")
 # #### 4. De-dup
 
 # Given a list of numbers or strings, create a new list containing the same elements as the first list, except with any duplicate values removed. Print the list.
