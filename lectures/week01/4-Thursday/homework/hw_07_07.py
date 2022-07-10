@@ -182,37 +182,69 @@ print(leet)
 # Spoon => Spooooon 
 # ```
 
-word = input("type a word >> ")
-word = word.upper()
+# word = input("type a word >> ")
+# word = word.upper()
 
-word_list = list(word)
-double_letter = []
-vowel = ['A', 'E', 'I', 'O', 'U']
-double = 0
+# word_list = list(word)
+# double_letter = []
+# vowel = ['A', 'E', 'I', 'O', 'U']
+# double = 0
 
-for i in word_list:
-    if(i not in double_letter):
-        double_letter.append(i)
-    elif(i in double_letter and i in vowel and double < 1):
-        double_letter.append(i*4)
-        double += 1    
-    elif(i in double_letter and i in vowel and double > 0):
-        double_letter.append(i)
+# for i in word_list:
+#     if(i not in double_letter):
+#         double_letter.append(i)
+#     elif(i in double_letter and i in vowel and double < 1):
+#         double_letter.append(i*4)
+#         double += 1    
+#     elif(i in double_letter and i in vowel and double > 0):
+#         double_letter.append(i)
 
-double_letter = ''.join(double_letter)
-print(double_letter)
-#? #### 7. Caesar Cipher
+# double_letter = ''.join(double_letter)
+# print(double_letter)
+# #? #### 7. Caesar Cipher
 
 # Given a string, print the Caesar Cipher (or ROT13) of that string. What is Caesar Cipher? [Learn about it here](http://practicalcryptography.com/ciphers/caesar-cipher/).
 
 # Use your solution to decipher the following text: "lbh zhfg hayrnea jung lbh unir yrnearq"
 
-caesar = { 'A': '1', 'B': '2', 'C': '3', 'D': '4', 'E': '5', 'F': '6', 'G': '7', 'H': '8', 'I': '9', 'J': '10', 'K': '11', 'L': '12', 'M': '13', 'N': '14', 'O': '15', 'P': '16', 'Q': '17', 'R': '18', 'S': '19', 'T': '20', 'U': '21', 'V': '22', 'W': '23', 'X': '24', 'Y': '25', 'Z': '26',}
+#todo caesar = { 'A': '1', 'B': '2', 'C': '3', 'D': '4', 'E': '5', 'F': '6', 'G': '7', 'H': '8', 'I': '9', 'J': '10', 'K': '11', 'L': '12', 'M': '13', 'N': '14', 'O': '15', 'P': '16', 'Q': '17', 'R': '18', 'S': '19', 'T': '20', 'U': '21', 'V': '22', 'W': '23', 'X': '24', 'Y': '25', 'Z': '26',}
+
+caesar = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+# choice = input('Do you want to encrypt or decrypt? E / D > ')
+user_word = input('enter a word > ')
+user_word = user_word.upper()
+# shit
+new_word = []
+j = 0
+
+
+for i in user_word:
+    if i == ' ':
+        new_word.append(' ')
+    else:    
+        j = caesar.index(i)
+        j -= 13
+        new_word.append(caesar[j])
+           
+user_word = ''.join(new_word)       
+print(user_word)    
+
 
 # ## Large 
 
 #? ### Matrix Multiplication
 # Given two two-dimensional lists of numbers of the size 2x2 - calculate the result of multiplying the two matrices. Print the resulting matrix.
+
+multx = [[1, 3], [2, 4]]
+multy = [[5, 2], [1, 0]]
+
+multr = [[0, 0], [0, 0]]
+
+for i in range(len(multx)):
+    for j in range(len(multx[0])): 
+        multr[i][j] = multx[i][j] * multy[i][j] 
+for r in multr:
+    print(r)
 
 # How do you multiple two matrices?
 
