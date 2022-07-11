@@ -222,8 +222,7 @@ for i in user_word:
     if i == ' ':
         new_word.append(' ')
     else:    
-        j = caesar.index(i)
-        j -= 13
+        j = caesar.index(i - 13)
         new_word.append(caesar[j])
            
 user_word = ''.join(new_word)       
