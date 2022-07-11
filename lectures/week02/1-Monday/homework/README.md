@@ -5,6 +5,10 @@
 
 Write a function `smallest` that accepts a List of numbers as an argument.
 
+def smallest(nums = [ ])
+    for i in nums:
+    
+
 It should return the smallest number in the List.
 
 #### 2. Find the largest number
