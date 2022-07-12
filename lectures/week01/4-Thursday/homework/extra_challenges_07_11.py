@@ -10,6 +10,9 @@
 
 # Given two two-dimensional lists of numbers of the size 2x2 - calculate the result of multiplying the two matrices. Print the resulting matrix. 
 
+from copy import copy
+
+
 def matrix_mult(nums1= [[ ], [ ]], nums2 = [[ ], [ ]]):
     
     nums3 = [[0, 0], [0, 0]]
@@ -29,10 +32,43 @@ print(matrix)
 
 # Extra Challenge
 
+
 #! ### 1. Tic-tac-toe 
 board = [[[0],[0],[0]],[[0],[0],[0]],[[0],[0],[0]]]
-def move(bo):
-    pass
+print(f"{board[0]} << Row 0")
+print(f"{board[1]} << Row 1")
+print(f"{board[2]} << Row 2")
+player1 = 'X'
+player2 = 'Y'
+playing = True
+
+# def question():
+#     row = int(input('What row do you want to move to? '))
+#     location = int(input('What location on that row? '))
+#     player = input('Player X or Y? ')
+
+def move(row, location, player):
+    board[row][location]=player
+    copy(board)
+    for i in range(len(board)):
+        print(f"{board[i]} << Row {i}")    
+    
+while playing:
+    row = int(input('What row do you want to move to? '))
+    # row -= 1
+    if row > 2:
+        print("Sorry that is not a valid board row")
+        row = int(input('What row do you want to move to? '))
+        # location -= 1
+    location = int(input('What location on that row? '))
+    # location -= 1
+    if location > 2:
+        print("Sorry that is not a valid board location")
+        location = int(input('What location on that row? '))
+        # location -= 1
+    player = input('Player X or Y? ')
+    move(row, location, player)
+   
 
 # Write a function `move` that accepts three arguments:
 
