@@ -1,3 +1,6 @@
+# name
+# address (street, suite, city, zip)
+
 data = [
     {
     "id": 1,
@@ -13,7 +16,8 @@ data = [
     "lat": "-37.3159",
     "lng": "81.1496"
     }
-    },
+    }
+    ,
     "phone": "1-770-736-8031 x56442",
     "website": "hildegard.org",
     "company": {
