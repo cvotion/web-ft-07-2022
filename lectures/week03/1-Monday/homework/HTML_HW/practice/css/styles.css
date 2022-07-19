@@ -1,0 +1,17 @@
+div{
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}
+
+.light{
+    background:white;
+    color: black;
+    padding-bottom: 10px;
+}
+.dark{
+    background:black;
+    color: white;
+    padding-bottom: 10px;
+}
