@@ -30,8 +30,7 @@ html = """
 """
 
 for i in color_data:
-    hex = i["hex_value"]
-    print(f"<style background-color = {hex} ></style>")
+    html+=f'\t<div style="background-color :{i["hex_value"]};" ></div>\n'
 
 html += """
 
