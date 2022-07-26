@@ -1,9 +1,11 @@
 import data 
 
-#? Loop through the colors data and display logo image and company name on an html page. 
-#* to run the file:  python3 colorsProblem.py > index.html
+#? Loop through the companies data and display logo image and company name on an html page. 
+#* to run the file:  python3 companies.py > index.html
 
 companies = data.data
+
+print(companies)
 
 html = """
 
@@ -20,6 +22,7 @@ html = """
         body{
             margin:0px;
         }
+
         div{
             display: flex;
             height: 50px;
